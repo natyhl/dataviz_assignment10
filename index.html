@@ -81,26 +81,23 @@
             margin-top: 0.5rem;
         }
         .chart-card {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
             border: 1px solid #c8d8c4;
             border-radius: 4px;
             overflow: hidden;
             text-decoration: none;
             color: #2c4a3e;
             transition: box-shadow 0.15s;
+            display: block;
         }
         .chart-card:hover { box-shadow: 0 2px 10px rgba(44,74,62,0.1); }
         .chart-card img {
-            width: 130px;
-            height: 90px;
-            object-fit: cover;
-            flex-shrink: 0;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
             background: #f0f5ef;
         }
         .chart-card .card-text {
-            padding: 0.5rem 0.75rem 0.5rem 0;
+            padding: 0.5rem 0.75rem;
         }
         .chart-card .card-label {
             font-size: 0.7rem;
@@ -151,6 +148,26 @@
                 <div class="card-text">
                     <div class="card-label">Figure 1 · AI Generated</div>
                     <div class="card-title">Sleep Duration by Activity Group</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- CHANGED: added Real-World Analysis section below Visualizations -->
+        <h2>Real-World Analysis</h2>
+        <p>The real-world misleading chart used in this project is the PS3 vs Xbox 360 console popularity chart. The original chart displays popularity percentages (PS3 at 49% and Xbox 360 at 46%) using a Y-axis that starts at 44.5% rather than 0%. This makes a 3-percentage-point difference look much bigger and creates the visual impression that PS3 is nearly three times more popular than Xbox 360. The actual difference would be considered a statistical tie. The ethical chart corrects this by starting the Y-axis at 0 and extending it to 100%, which is the full range for a percentage variable. At this scale, the 3-point gap between the two consoles is accurately visible as a minor difference.</p>
+        <div class="chart-row"> <!-- CHANGED: added two chart cards for original and ethical chart -->
+            <div class="chart-card">
+                <img src="scrnli_29Mqg1IpoEuzmp.png" alt="Original misleading PS3 vs Xbox chart">
+                <div class="card-text">
+                    <div class="card-label">Original · Misleading</div>
+                    <div class="card-title">PS3 vs Xbox 360 — Non-zero Baseline</div>
+                </div>
+            </a>
+            <a href="bar_ethical.html" class="chart-card">
+                <img src="scrnli_c78V6W4npfvIgJ.png" alt="Ethical D3 remake of PS3 vs Xbox chart">
+                <div class="card-text">
+                    <div class="card-label">Ethical Remake · D3</div>
+                    <div class="card-title">PS3 vs Xbox 360 — Zero Baseline</div>
                 </div>
             </a>
         </div>
